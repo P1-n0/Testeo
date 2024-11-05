@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectángulos con Sombra</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffc1c1; /* Fondo rojo pastel */
+            position: relative;
+        }
+
+        .rectangulo {
+            width: 300px;
+            height: 150px;
+            border-radius: 50px;
+            background-color: #ff0000; /* Rojo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sombra {
+            background-color: #b30000; /* Rojo más oscuro */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(20px, 20px); /* Desplazamiento de 20px en ambas direcciones */
+        }
+
+        .texto {
+            color: white;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sombra detrás -->
+    <div class="rectangulo sombra"></div>
+    <!-- Rectángulo principal encima -->
+    <div class="rectangulo">
+        <span class="texto">12345678901234567890</span>
+    </div>
+</body>
+</html>
